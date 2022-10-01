@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.urls import URLPattern, path, re_path
 from django.urls import include
-import craigslist.views as views
+from craigslist.views.vehicles import VehiclesView
 
 urlpatterns = [
-    path('vehicles', views.vehicles)
+    path('vehicles', VehiclesView.as_view())
 ]
