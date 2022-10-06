@@ -2,6 +2,7 @@ from craigslist.utils.json_utils import parse_json
 
 
 qp_map = {
+    #vehicle
     'location': 'location',
     'hasPhoto': 'hasPic',
     'mostRecent': 'postedToday',
@@ -23,7 +24,7 @@ def create_url(raw_data):
     location = json_data['location']
     mapped_data = map_data(json_data)
     url = f'{location}.craigslist.org/search/cta'+ create_query_params(mapped_data=mapped_data)
-    return 'https://'+ url
+    return ('https://'+ url).lower()
 
 def create_query_params(mapped_data):
     first_iter = True
