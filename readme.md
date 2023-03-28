@@ -49,6 +49,20 @@ Searches for vehicles matching the paramaters supplied in the JSON body. Availab
     }
 }
 ```
+(ex. response) 
+```
+"data": {
+    "result_4": {
+        "title": "2003 LEXUS ES300 GOOD RUNNING CAR",
+        "link": "https://rockford.craigslist.org/cto/d/rockford-2003-lexus-es300-good-running/7604046151.html",
+        "price": "$2,900"
+    },
+    "result_5": {
+        "title": "1997 Lexus ES 300 Sedan",
+        "link": "https://kansascity.craigslist.org/cto/d/kansas-city-1997-lexus-es-300-sedan/7604002076.html",
+        "price": "$4,200"
+},
+```
 
 ---
 
