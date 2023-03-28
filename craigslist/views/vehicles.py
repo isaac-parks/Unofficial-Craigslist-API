@@ -5,14 +5,15 @@ from craigslist.utils.html_utils import create_response_dict
 from django.views import View
 from django.http import HttpResponse
 from django.http import JsonResponse
-from api.globals import get_global_driver
+from globals import get_global_driver
 
 class VehiclesView(View):
     def post(self, request):
         if verify_request(request.body):
             url = create_url(request.body)
-            global_driver = get_global_driver(start_url=url, args=["--headless"])
-            time.sleep(1)
+            global_driver = get_global_driver()
+            global_driver.driver.get(url)
+            time.sleep(0.5)
             html = global_driver.driver.page_source.encode()
             response_dict = create_response_dict(html=html)
             return JsonResponse(response_dict)

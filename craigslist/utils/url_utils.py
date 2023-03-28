@@ -1,6 +1,5 @@
 from craigslist.utils.json_utils import parse_json
 
-
 qp_map = {
     #vehicle
     'location': 'location',
@@ -46,7 +45,6 @@ def map_exceptions(mapped_data):
     del mapped_data['location']
     keys = mapped_data.keys()
     map_true_false(mapped_data)
-
     if 'make' in keys or 'model' in keys:
         mapped_data['auto_make_model'] = ''
         if 'make' in keys:
