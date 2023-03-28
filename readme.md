@@ -45,7 +45,7 @@ Searches for vehicles matching the paramaters supplied in the JSON body. Availab
         "location": "desmoines",
         "make": "lexus",
         "maxPrice": 5000,
-        hasPhoto: true
+        "hasPhoto": true
     }
 }
 ```
